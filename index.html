@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triqui - Juego</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="triqui" class="game-section">
+    <h2>Se nota que ando aburrido</h2>
+    <div class="scoreboard">
+      <span id="scoreX">X: 0</span> • 
+      <span id="scoreO">O: 0</span> • 
+      <span id="scoreDraw">Empates: 0</span>
+    </div>
+    <div class="options">
+      <label><input type="checkbox" id="cpuToggle"> Jugador vs CPU</label>
+      <button onclick="resetGame()">Reiniciar</button>
+    </div>
+
+    <div class="board" id="board"></div>
+    <p id="turn">Turno: X</p>
+    <div id="gameMessage" class="game-message"></div> <!-- Nuevo contenedor -->
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

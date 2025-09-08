@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+.game-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.game-section h2 {
+  color: #00aaff;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.scoreboard {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.options {
+  margin-bottom: 20px;
+}
+
+.options button {
+  background: #00aaff;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.options button:hover {
+  background: #008ecc;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 8px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.cell {
+  background: #222;
+  border-radius: 12px;
+  font-size: 2.5rem;
+  color: #00aaff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cell:hover {
+  background: #333;
+}
+
+.game-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: #00aaff;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2rem;
+  padding: 30px 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s, transform 0.5s;
+  z-index: 1000;
+}
+
+.game-message.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
+}
